@@ -1,4 +1,4 @@
-Foundations of AI — Lab 2: Weather Prediction
+# Weather_Prediction
 
 Overview
 
@@ -89,4 +89,3 @@ Notes & suggestions (proactive review)
 Acknowledgements
 
 This project uses CF6 reports from the National Weather Service.
-# Weather_Prediction
