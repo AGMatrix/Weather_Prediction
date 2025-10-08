@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 1400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <defs>
+    <style>
+      .process-box { fill: #d4e6f1; stroke: #3498db; stroke-width: 2; rx: 10; ry: 10; }
+      .decision-box { fill: #d5f5e3; stroke: #2ecc71; stroke-width: 2; }
+      .data-box { fill: #fdebd0; stroke: #f39c12; stroke-width: 2; rx: 10; ry: 10; }
+      .result-box { fill: #ebdef0; stroke: #8e44ad; stroke-width: 2; rx: 10; ry: 10; }
+      .arrow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .text { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; text-anchor: middle; }
+      .model-text { font-family: Arial, sans-serif; font-size: 12px; fill: #2c3e50; text-anchor: middle; }
+      .title-text { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; text-anchor: middle; }
+      .step-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50; text-anchor: start; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" class="title-text">Image Similarity Project Using Self-Supervised Models</text>
+
+  <!-- Step 1: Data Preparation -->
+  <text x="50" y="70" class="step-text">Step 1: Data Preparation</text>
+  <rect x="150" y="50" width="700" height="100" class="process-box" />
+  <text x="500" y="80" class="text">Load TinyImageNet from Hugging Face Dataset</text>
+  <text x="500" y="105" class="text">Process Train, Validation, and Test Sets</text>
+  <text x="500" y="130" class="text">Convert Image Bytes to PIL Images</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="150" x2="500" y2="180" class="arrow" />
+
+  <!-- Step 2: Load Pre-trained Models -->
+  <text x="50" y="220" class="step-text">Step 2: Pre-trained Models</text>
+  <rect x="150" y="180" width="700" height="120" class="process-box" />
+
+  <!-- Model Boxes -->
+  <rect x="200" y="200" width="250" height="80" class="data-box" />
+  <text x="325" y="230" class="model-text">SwAV Model</text>
+  <text x="325" y="250" class="model-text">ResNet-50 Architecture</text>
+  <text x="325" y="270" class="model-text">Trained with Contrastive Learning</text>
+
+  <rect x="550" y="200" width="250" height="80" class="data-box" />
+  <text x="675" y="230" class="model-text">DinoV2 Model</text>
+  <text x="675" y="250" class="model-text">Vision Transformer Architecture</text>
+  <text x="675" y="270" class="model-text">Trained with Knowledge Distillation</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="300" x2="500" y2="330" class="arrow" />
+
+  <!-- Step 3: Feature Extraction Pipeline -->
+  <text x="50" y="370" class="step-text">Step 3: Feature Extraction</text>
+  <rect x="150" y="330" width="700" height="100" class="process-box" />
+  <text x="500" y="360" class="text">Define Image Preprocessing Transforms</text>
+  <text x="500" y="385" class="text">Create Functions to Extract Image Features</text>
+  <text x="500" y="410" class="text">Implement Similarity Computation Functions</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="430" x2="500" y2="460" class="arrow" />
+
+  <!-- Step 4: Create Image Pairs -->
+  <text x="50" y="500" class="step-text">Step 4: Image Pairs</text>
+  <rect x="150" y="460" width="700" height="80" class="process-box" />
+  <text x="500" y="490" class="text">Generate Balanced Dataset of Image Pairs</text>
+  <text x="500" y="515" class="text">Create Ground Truth Labels (1 for Same Class, 0 for Different Class)</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="540" x2="500" y2="570" class="arrow" />
+
+  <!-- Step 5: Feature Extraction for Test Set -->
+  <text x="50" y="610" class="step-text">Step 5: Process Test Set</text>
+  <rect x="150" y="570" width="700" height="80" class="process-box" />
+  <text x="500" y="600" class="text">Extract Features from Test Images Using Both Models</text>
+  <text x="500" y="625" class="text">Compute Similarity Scores for All Pairs</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="650" x2="500" y2="680" class="arrow" />
+
+  <!-- Step 6: Evaluation and Analysis -->
+  <text x="50" y="720" class="step-text">Step 6: Evaluation</text>
+  <rect x="150" y="680" width="700" height="100" class="process-box" />
+  <text x="500" y="710" class="text">Find Optimal Thresholds for Classification</text>
+  <text x="500" y="735" class="text">Calculate Metrics: Accuracy, Precision, Recall, F1 Score, AUC</text>
+  <text x="500" y="760" class="text">Compare Model Performance</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="780" x2="500" y2="810" class="arrow" />
+
+  <!-- Step 7: Visualization -->
+  <text x="50" y="850" class="step-text">Step 7: Visualization</text>
+  <rect x="150" y="810" width="700" height="80" class="process-box" />
+  <text x="500" y="840" class="text">Plot ROC Curves and Similarity Distributions</text>
+  <text x="500" y="865" class="text">Visualize Example Image Pairs and Model Predictions</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="890" x2="500" y2="920" class="arrow" />
+
+  <!-- Step 8: Ensemble Method -->
+  <text x="50" y="960" class="step-text">Step 8: Ensemble Methods</text>
+  <rect x="150" y="920" width="700" height="100" class="process-box" />
+  <text x="500" y="950" class="text">Combine SwAV and DinoV2 Models with Weighted Average</text>
+  <text x="500" y="975" class="text">Optimize Weight Parameter (Alpha) for Best Performance</text>
+  <text x="500" y="1000" class="text">Train Meta-Classifier for Advanced Ensemble</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="1020" x2="500" y2="1050" class="arrow" />
+
+  <!-- Step 9: Class-Specific Analysis -->
+  <text x="50" y="1090" class="step-text">Step 9: Class Analysis</text>
+  <rect x="150" y="1050" width="700" height="80" class="process-box" />
+  <text x="500" y="1080" class="text">Analyze Performance by Class to Identify Model Strengths</text>
+  <text x="500" y="1105" class="text">Identify Classes with Significant Performance Differences</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="1130" x2="500" y2="1160" class="arrow" />
+
+  <!-- Step 10: Results and Conclusions -->
+  <text x="50" y="1200" class="step-text">Step 10: Results</text>
+  <rect x="150" y="1160" width="700" height="130" class="result-box" />
+  <text x="500" y="1185" class="text">Compare All Approaches (SwAV, DinoV2, Ensembles)</text>
+  <text x="500" y="1210" class="text">Highlight Best Model for Different Use Cases</text>
+  <text x="500" y="1235" class="text">Quantify Improvements from Ensemble Methods</text>
+  <text x="500" y="1260" class="text">Draw Final Conclusions and Recommendations</text>
+
+  <!-- Performance Comparison -->
+  <rect x="150" y="1310" width="700" height="60" class="data-box" />
+  <text x="500" y="1340" class="text">Final Performance: DinoV2 vs SwAV vs Ensemble vs Meta-classifier</text>
+</svg>
